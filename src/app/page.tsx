@@ -10,7 +10,7 @@ import NewsHomePage from "../../public/NewsHomePage.png";
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col items-start bg-slate-900 text-slate-400 px-6 md:px-12 lg:px-24 lg:flex-row lg:gap-4 lg:pt-6">
-      <header className="my-12 md:my-20 lg:max-h-screen lg:sticky lg:top-20 lg:w-1/2">
+      <header className="my-12 md:my-20 lg:max-h-screen lg:sticky lg:top-[104px] lg:w-1/2">
         <div>
           <h1 className="text-4xl sm:text-5xl text-slate-200 font-bold tracking-tight">Dustin Kurtz</h1>
           <h3 className="text-slate-200 text-lg sm:text-xl font-medium tracking-tight my-3.5">Software Engineer</h3>
