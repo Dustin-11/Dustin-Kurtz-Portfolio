@@ -3,11 +3,14 @@ import GithubIcon from "../../public/github-142-svgrepo-com.svg";
 import LinkedInIcon from "../../public/linkedin-svgrepo-com.svg";
 import Arrow from "../../public/arrow-up-right-svgrepo-com.svg";
 import BillEaseInvoices from "../../public/BillEase-Invoices.png";
+import DevlinksLinks from "../../public/Devlinks-Links.png";
+import WorldExploreX from "../../public/WorldExploreX.png";
+import NewsHomePage from "../../public/NewsHomePage.png";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col items-start bg-slate-900 text-slate-400 px-6 md:px-12">
-      <header className="my-12 md:my-20">
+    <div className="flex min-h-screen flex-col items-start bg-slate-900 text-slate-400 px-6 md:px-12 lg:px-24 lg:flex-row lg:gap-4 lg:pt-6">
+      <header className="my-12 md:my-20 lg:max-h-screen lg:sticky lg:top-20 lg:w-1/2">
         <div>
           <h1 className="text-4xl sm:text-5xl text-slate-200 font-bold tracking-tight">Dustin Kurtz</h1>
           <h3 className="text-slate-200 text-lg sm:text-xl font-medium tracking-tight my-3.5">Software Engineer</h3>
@@ -35,7 +38,7 @@ export default function Home() {
             </ul>
           </nav>
         </div>
-        <ul className="flex gap-4 items-center mt-7 px-1">
+        <ul className="flex gap-4 items-center mt-7 px-1 lg:fixed lg:bottom-24">
           <li className="w-6 h-6">
             <Image src={GithubIcon} alt="Github logo" />
           </li>
@@ -44,29 +47,32 @@ export default function Home() {
           </li>
         </ul>
       </header>
-      <main className="pb-10">
+      <main className="pb-16 lg:max-h-full lg:w-1/2 lg:mt-12 lg:mb-12 scroll-smooth">
         <section id="about" className="mt-7 leading-customHeight">
-          <h3 className="text-slate-200 font-extrabold text-sm my-9 tracking-widest">ABOUT</h3>
-          <p>Back in 2012, I decided to try my hand at creating custom Tumblr themes and tumbled head first into the 
-            rabbit hole of coding and web development. Fast-forward to today, and I&rsquo;ve had the privilege of building
-             software for an advertising agency, a start-up, a huge corporation, and a digital product studio.</p>
-           <p className="mt-4">My main focus these days is building accessible user interfaces for our customers at Klaviyo. I most enjoy
-             building software in the sweet spot where design and engineering meet — things that look good but are also
-              built well under the hood. In my free time, I&rsquo;ve also released an online video course that covers everything
-               you need to know to build a web app with the Spotify API.</p>
-           <p className="mt-4">When I&rsquo;m not at the computer, I&rsquo;m usually rock climbing, reading, hanging out with my wife and two cats, 
-            or running around Hyrule searching for Korok Seeds.</p>
+          <h3 className="text-slate-200 font-extrabold text-sm my-9 tracking-widest lg:hidden">ABOUT</h3>
+          <p>Back in 2022, I decided to dive headfirst into the vast world of software development! Fast-forward to today, 
+             and I&rsquo;ve had the privilege of building software for a large manufacturing company, a small local business, 
+             and myself!</p>
+          <p className="mt-4">My journey started as a self-taught software developer where I honed my skills primarily through
+             building applications and websites. Then I transitioned this experience into a full-time profession in 2023.
+          </p>
+          <p className="mt-4">When I&rsquo;m not at the computer, I&rsquo;m usually hiking, mountain biking, or hanging out with my wife.
+          </p>
         </section>
         <section id="experience" className="mt-20">
-          <h3 className="text-slate-200 font-extrabold text-sm my-11 tracking-widest">EXPERIENCE</h3>
+          <h3 className="text-slate-200 font-extrabold text-sm my-11 tracking-widest lg:hidden">EXPERIENCE</h3>
           <ul>
-            <li className="sm:flex">
-              <h5 className="text-xs sm:w-1/4">Oct 2023 - PRESENT</h5>
+            <li className="sm:flex sm:gap-4">
+              <h5 className="text-xs sm:w-1/4 sm:mt-3">Oct 2023 - PRESENT</h5>
               <div className="sm:w-3/4">
                 <h3 className="text-slate-200 font-semibold text-md my-2 tracking-widest">Software Engineer - <a>Mavin</a></h3>
-                <p className="text-sm">Build and maintain critical components used to construct Klaviyo&rsquo;s frontend, across the whole product. 
-                  Work closely with cross-functional teams, including developers, designers, and product managers, to 
-                  implement and advocate for best practices in web accessibility.</p>
+                <p className="text-sm">
+                  • Enhanced functionality of legacy ERP system.<br/>
+                  • Implemented improvements to core manufacturing and budgeting applications, enhancing user-experience, accuracy, and capacity.<br/>
+                  • Managed the full life-cycle of in-house applications.<br/>
+                  • Implemented version control and systemization of locally hosted programs.<br/>
+                  • Collaborated with non-technical personnel to develop solutions meeting business objectives.
+                </p>
                 <div className="mt-6 flex flex-wrap gap-2">
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">C#</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">SQL</span>
@@ -79,13 +85,19 @@ export default function Home() {
                 </div>
               </div>
             </li>
-            <li className="mt-11 sm:flex">
-              <h5 className="text-xs sm:w-1/4">Aug 2022 - Present</h5>
+            <li className="mt-11 sm:flex sm:gap-4">
+              <h5 className="text-xs sm:w-1/4 sm:mt-3">Aug 2022 - PRESENT</h5>
               <div className="sm:w-3/4">
-                <h3 className="text-slate-200 font-semibold text-md my-2 tracking-widest">Software Developer - <a>Self-Taught</a></h3>
-                <p className="text-sm">Build and maintain critical components used to construct Klaviyo&rsquo;s frontend, across the whole product. 
-                  Work closely with cross-functional teams, including developers, designers, and product managers, to 
-                  implement and advocate for best practices in web accessibility.</p>
+                <h3 className="text-slate-200 font-semibold text-md my-2 tracking-widest">Software Developer - Self-Taught</h3>
+                <p className="text-sm">
+                  • Developed foundational software development skills, including object-oriented programming (OOP), 
+                    proficiency in multiple programming languages, and experience with frontend frameworks.<br/>
+                  • Built diverse projects, including full-stack web application, API projects, and static websites, to apply and reinforce new skills.<br/>
+                  • Enhanced critical thinking and problem-solving abilities through real-world challenges in project development, 
+                    such as API integration, scalability, cross-platform compatability, etc.<br/>
+                  • Cultivated a deep passion for software development, driving continuous learning and growth.<br/>
+                  • Transitioned from novice programmer to proficient full-stack developer, creating scalable and reliable applications.<br/>
+                </p>
                 <div className="mt-6 flex flex-wrap gap-2">
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Typescript</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Javascript</span>
@@ -100,19 +112,28 @@ export default function Home() {
             </li>
           </ul>
           <div className="flex items-center gap-2">
-            <span className="text-slate-200 font-extrabold text-md my-11 tracking-widest">View Full Resume</span>
+            <a className="text-slate-200 font-extrabold text-md my-11 tracking-widest" href="">View Full Resume</a>
             <Image src={Arrow} alt="ArrowIcon" width={20} height={20}/>
           </div>
         </section>
         <section id="projects" className="mt-10">
-          <h3 className="text-slate-200 font-extrabold text-sm my-11 tracking-widest">PROJECTS</h3>
+          <h3 className="text-slate-200 font-extrabold text-sm my-11 tracking-widest lg:hidden">PROJECTS</h3>
           <ul>
             <li className="sm:flex flex-row-reverse">
               <div className="sm:w-3/4">
-                <h3 className="text-slate-200 font-semibold text-md my-2 tracking-widest">BillEase</h3>
-                <p className="text-sm">Build and maintain critical components used to construct Klaviyo&rsquo;s frontend, across the whole product. 
-                  Work closely with cross-functional teams, including developers, designers, and product managers, to 
-                  implement and advocate for best practices in web accessibility.</p>
+                <a className="flex items-center gap-2 h-10" href="https://bill-ease-eight.vercel.app/" target="_blank" rel="noopener noreferrer">
+                  <span className="text-slate-200 font-extrabold text-md my-11 tracking-widest">BillEase</span>
+                  <Image src={Arrow} alt="ArrowIcon" width={20} height={20}/>
+                </a>
+                <p className="text-sm">
+                  • A full-stack application for managing invoices, customers, and profile settings.<br/>
+                  • Actively used by a local manufacturing company, this application streamlines invoice management and customer contact records.<br/>
+                  • Adheres to a multi-tenant architecture, allowing it to serve multiple users each with their own user-specific data.<br/>
+                  • Implemented CRUD operations for invoices to maintain up-to-date records.<br/>
+                  • Provided functionality to manage customer records efficiently.<br/>
+                  • Enabled users to manage profile settings, including profile photo, saved contact info, and password updates.<br/>
+                  • Also allows the user to manage their profile settings, such as profile photo, saved contact info, profile photo, and update their password.<br/>
+                </p>
                 <div className="my-6 flex flex-wrap gap-2">
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Next</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Firebase</span>
@@ -124,39 +145,77 @@ export default function Home() {
                 <Image src={BillEaseInvoices} alt="Screenshot of BillEase App"/>
               </div>
             </li>
-            <li className="mt-11">
-              <h3 className="text-slate-200 font-semibold text-md my-2 tracking-widest">DevLinks</h3>
-              <p className="text-sm">Build and maintain critical components used to construct Klaviyo&rsquo;s frontend, across the whole product. 
-                Work closely with cross-functional teams, including developers, designers, and product managers, to 
-                implement and advocate for best practices in web accessibility.</p>
-              <div className="mt-6 flex flex-wrap gap-2">
-                <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Next</span>
-                <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Firebase</span>
-                <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Typescript</span>
-                <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Tailwind</span>
+            <li className="mt-11 sm:flex flex-row-reverse">
+              <div className="sm:w-3/4">
+                <a className="flex items-center gap-2 h-10" href="https://devlinks-kur6z8nmb-dustin-kurtzs-projects.vercel.app/" target="_blank" rel="noopener noreferrer">
+                  <span className="text-slate-200 font-extrabold text-md my-11 tracking-widest">Devlinks</span>
+                  <Image src={Arrow} alt="ArrowIcon" width={20} height={20}/>
+                </a>
+                <p className="text-sm">
+                  • A comprehensive link-sharing platform for professionals.<br/>
+                  • A full-stack application that facilitates easy sharing of multiple social media links using a single, customizable link.<br/>
+                  • Enables users to create, read, update, and delete links, tailoring their shared content to their needs.<br/>
+                  • Utilizes dynamic SVG customizations to create a dynamic user interface based on the links added by the user, optimized for large screens.<br/>
+                  • Implements custom drag-and-drop logic, allowing users to effortlessly reorder the links they share.<br/>
+                  • Follows a multi-tenant architecture, ensuring data isolation and customization for each user, enabling the platform to serve multiple users effectively.<br/>
+                </p>
+                <div className="my-6 flex flex-wrap gap-2">
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Next</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Firebase</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Typescript</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Tailwind</span>
+                </div>
+              </div>
+              <div className="w-40 sm:w-1/4 sm:pr-10 sm:mt-3">
+                <Image src={DevlinksLinks} alt="Screenshot of Devlinks App"/>
+              </div>
+              
+            </li>
+            <li className="mt-11 sm:flex flex-row-reverse">
+              <div className="sm:w-3/4">
+                <a className="flex items-center gap-2 h-10" href="https://dustin-11.github.io/Country_Api_App/" target="_blank" rel="noopener noreferrer">
+                  <span className="text-slate-200 font-extrabold text-md my-11 tracking-widest">WorldExploreX</span>
+                  <Image src={Arrow} alt="ArrowIcon" width={20} height={20}/>
+                </a>
+                <p className="text-sm">
+                  • A frontend application for exploring countries around the world.<br/>
+                  • Allows users to explore countries worldwide from their computer.<br/>
+                  • Consumes an API to provide users with information about countries all over the world.<br/>
+                  • Enables users to search for countries by name, with results dynamically filtered as they type.<br/>
+                  • Provides predefined filters for users to explore countries by region.<br/>
+                  • Provides detailed information about selected countries when clicked by the user.<br/>
+                </p>
+                <div className="mt-6 flex flex-wrap gap-2">
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">React</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Javascript</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Tailwind</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">API</span>
+                </div>
+              </div>
+              <div className="w-40 sm:w-1/4 sm:pr-10 sm:mt-3">
+                <Image src={WorldExploreX} alt="Screenshot of BillEase App"/>
               </div>
             </li>
-            <li className="mt-11">
-              <h3 className="text-slate-200 font-semibold text-md my-2 tracking-widest">WorldExploreX</h3>
-              <p className="text-sm">Build and maintain critical components used to construct Klaviyo&rsquo;s frontend, across the whole product. 
-                Work closely with cross-functional teams, including developers, designers, and product managers, to 
-                implement and advocate for best practices in web accessibility.</p>
-              <div className="mt-6 flex flex-wrap gap-2">
-                <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">React</span>
-                <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Javascript</span>
-                <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Tailwind</span>
-                <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">API</span>
+            <li className="mt-11 sm:flex flex-row-reverse">
+              <div className="sm:w-3/4">
+                <a className="flex items-center gap-2 h-10" href="https://dustin-11.github.io/NewsHomePage/" target="_blank" rel="noopener noreferrer">
+                  <span className="text-slate-200 font-extrabold text-md my-11 tracking-widest">NewsHomePage</span>
+                  <Image src={Arrow} alt="ArrowIcon" width={20} height={20}/>
+                </a>
+                <p className="text-sm">
+                  • A static landing page for a news organization.<br/>
+                  • Represents a simple, yet engaging, landing page for a news organization.<br/>
+                  • Utilizes a responsive design to ensure optimal viewing experience across devices.<br/>
+                  • Incorporates interactive effects that respond to user events, enhancing user engagement.<br/>
+                </p>
+                <div className="mt-6 flex flex-wrap gap-2">
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Javascript</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Tailwind</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Semantic HTML</span>
+                </div>
               </div>
-            </li>
-            <li className="mt-11">
-              <h3 className="text-slate-200 font-semibold text-md my-2 tracking-widest">NewsHomePage</h3>
-              <p className="text-sm">Build and maintain critical components used to construct Klaviyo&rsquo;s frontend, across the whole product. 
-                Work closely with cross-functional teams, including developers, designers, and product managers, to 
-                implement and advocate for best practices in web accessibility.</p>
-              <div className="mt-6 flex flex-wrap gap-2">
-                <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Javascript</span>
-                <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Tailwind</span>
-                <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Semantic HTML</span>
+              <div className="w-40 sm:w-1/4 sm:pr-10 sm:mt-3">
+                <Image src={NewsHomePage} alt="Screenshot of BillEase App"/>
               </div>
             </li>
           </ul>
