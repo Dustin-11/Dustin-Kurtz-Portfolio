@@ -40,10 +40,14 @@ export default function Home() {
         </div>
         <ul className="flex gap-4 items-center mt-7 px-1 lg:fixed lg:bottom-24">
           <li className="w-6 h-6">
-            <Image src={GithubIcon} alt="Github logo" />
+            <a href="https://github.com/dustin-11" target="_blank" rel="noopener noreferrer">
+              <Image src={GithubIcon} alt="Github logo" />
+            </a>
           </li>
           <li className="w-8 h-8">
-            <Image src={LinkedInIcon} alt="LinkedIn logo" />
+            <a href="https://www.linkedin.com/in/dustin-kurtz11/" target="_blank" rel="noopener noreferrer">
+              <Image src={LinkedInIcon} alt="LinkedIn logo" />
+            </a>
           </li>
         </ul>
       </header>
@@ -79,7 +83,7 @@ export default function Home() {
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">.NET</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">XAML</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Legacy ERP</span>
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Microsoft SQL</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Microsoft SQL Server</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10 mr-2">MySQL</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10 mr-2">Dapper</span>
                 </div>
@@ -112,7 +116,7 @@ export default function Home() {
             </li>
           </ul>
           <div className="flex items-center gap-2">
-            <a className="text-slate-200 font-extrabold text-md my-11 tracking-widest" href="">View Full Resume</a>
+            <a className="text-slate-200 font-extrabold text-md my-11 tracking-widest" href="/SkyCatchFireResume.pdf">View Full Resume</a>
             <Image src={Arrow} alt="ArrowIcon" width={20} height={20}/>
           </div>
         </section>
