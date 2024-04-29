@@ -116,7 +116,7 @@ export default function Home() {
             </li>
           </ul>
           <div className="flex items-center gap-2">
-            <a className="text-slate-200 font-extrabold text-md my-11 tracking-widest" href="/SkyCatchFireResume.pdf">View Full Resume</a>
+            <a className="text-slate-200 font-extrabold text-md my-11 tracking-widest" href="/SkyCatchFireResume.pdf" target="_blank" rel="noopener noreferrer">View Full Resume</a>
             <Image src={Arrow} alt="ArrowIcon" width={20} height={20}/>
           </div>
         </section>
