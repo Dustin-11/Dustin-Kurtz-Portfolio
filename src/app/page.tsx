@@ -221,7 +221,7 @@ export default function Home() {
                   • Provides predefined filters for users to explore countries by region.<br/>
                   • Provides detailed information about selected countries when clicked by the user.<br/>
                 </p>
-                <div className="mt-6 flex flex-wrap gap-2">
+                <div className="my-6 flex flex-wrap gap-2">
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">React</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Javascript</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Tailwind</span>
@@ -244,7 +244,7 @@ export default function Home() {
                   • Utilizes a responsive design to ensure optimal viewing experience across devices.<br/>
                   • Incorporates interactive effects that respond to user events, enhancing user engagement.<br/>
                 </p>
-                <div className="mt-6 flex flex-wrap gap-2">
+                <div className="my-6 flex flex-wrap gap-2">
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Javascript</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Tailwind</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Semantic HTML</span>
