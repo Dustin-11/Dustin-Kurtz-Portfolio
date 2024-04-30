@@ -1,3 +1,5 @@
+'use client';
+
 import Image from "next/image";
 import GithubIcon from "../../public/github-142-svgrepo-com.svg";
 import LinkedInIcon from "../../public/linkedin-svgrepo-com.svg";
@@ -6,10 +8,166 @@ import BillEaseInvoices from "../../public/BillEase-Invoices.png";
 import DevlinksLinks from "../../public/Devlinks-Links.png";
 import WorldExploreX from "../../public/WorldExploreX.png";
 import NewsHomePage from "../../public/NewsHomePage.png";
+import { useEffect, useRef } from "react";
 
 export default function Home() {
+  const scrollControlRef = useRef<HTMLDivElement>(null);
+
+//   useEffect(() => {
+//     // if (scrollControlRef.current) {
+//     //   const aboutAccent = document.querySelector('#about-Accent');
+//     //   const experienceAccent = document.querySelector('#experience-Accent');
+//     //   const projectsAccent = document.querySelector('#projects-Accent');
+  
+//     //   const handleScroll = () => {
+//     //     if(scrollControlRef.current) {
+//     //       const scrollTop = scrollControlRef.current.scrollTop;
+//     //       console.log(scrollTop);
+  
+//     //       if (scrollTop > 450 && scrollTop < 1580) {
+//     //         aboutAccent?.classList.remove('active-Accent');
+//     //         experienceAccent?.classList.add('active-Accent');
+//     //         projectsAccent?.classList.remove('active-Accent');
+//     //       } else if (scrollTop >= 1580) {
+//     //         aboutAccent?.classList.remove('active-Accent');
+//     //         experienceAccent?.classList.remove('active-Accent');
+//     //         projectsAccent?.classList.add('active-Accent');
+//     //       } else {
+//     //         aboutAccent?.classList.add('active-Accent');
+//     //         experienceAccent?.classList.remove('active-Accent');
+//     //         projectsAccent?.classList.remove('active-Accent');
+//     //       }
+//     //     };
+//     //     }
+        
+  
+//     //   scrollControlRef.current.addEventListener('scroll', handleScroll);
+  
+//     //   return () => {
+//     //     scrollControlRef.current?.removeEventListener('scroll', handleScroll);
+//     //   };
+//     // }
+
+//     // Create an intersection observer instance
+// const observer = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     const target = entry.target;
+//     const intersectionRatio = entry.intersectionRatio;
+
+//     // Calculate the position of the element relative to the viewport
+//     const elementTop = entry.boundingClientRect.top;
+//     const elementBottom = entry.boundingClientRect.bottom;
+//     const viewportHeight = window.innerHeight;
+//     const isInMiddle = elementTop < viewportHeight / 2 && elementBottom > viewportHeight / 2;
+
+//     if (isInMiddle) {
+//       console.log('Element is in the middle of the viewport');
+//     } else {
+//       console.log('Element is not in the middle of the viewport');
+//     }
+//   });
+// });
+
+// const handleScroll = () => {
+//   // Start observing a target element
+//   const target = document.querySelector('#projects');
+//   if (target) {
+//     observer.observe(target);
+//   }
+//         }
+
+// if(scrollControlRef.current) {
+//   scrollControlRef.current.addEventListener('scroll', handleScroll);
+// }
+
+  
+//       return () => {
+//         scrollControlRef.current?.removeEventListener('scroll', handleScroll);
+//       };
+
+
+//   }, []);
+
+// useEffect(() => {
+//   const observer = new IntersectionObserver((entries) => {
+//     entries.forEach((entry) => {
+//       const target = entry.target;
+//       const intersectionRatio = entry.intersectionRatio;
+//       const isIntersecting = entry.isIntersecting;
+
+//       // Calculate the position of the element relative to the viewport
+//       const elementTop = entry.boundingClientRect.top;
+//       const elementBottom = entry.boundingClientRect.bottom;
+//       const viewportHeight = window.innerHeight;
+//       console.log(window.screenTop);
+//       const isInMiddle = elementTop < viewportHeight / 2;
+//       if(!isIntersecting) {
+//         console.log("Left the chat", target);
+//       } else {
+//         console.log("Entered the chat", target);
+//       }
+
+//       // if (isInMiddle) {
+//       //   console.log('Element is in the middle of the viewport');
+//       // } else {
+//       //   console.log('Element is not in the middle of the viewport');
+//       // }
+//     });
+//   });
+  
+
+
+//   const handleScroll = () => {
+//     // Start observing a target element
+//     const divSelectors = ['#about', '#experience', '#projects']; // Add your div selectors here
+//     divSelectors.forEach((selector) => {
+//       const target = document.querySelector(selector);
+//       if (target) {
+//         observer.observe(target);
+//       }
+//     });
+//   };
+
+//   if (scrollControlRef.current) {
+//     scrollControlRef.current.addEventListener('scroll', handleScroll);
+//   }
+
+//   return () => {
+//     if (scrollControlRef.current) {
+//       scrollControlRef.current.removeEventListener('scroll', handleScroll);
+//     }
+//   };
+// }, []);
+
+  const scrollToAbout = () => {
+    if(scrollControlRef.current) {
+      const childDiv = scrollControlRef.current.querySelector('#about');
+      if(childDiv) {
+        childDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  }
+
+  const scrollToExperience = () => {
+    if(scrollControlRef.current) {
+      const childDiv = scrollControlRef.current.querySelector('#experience');
+      if(childDiv) {
+        childDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  }
+
+  const scrollToProjects = () => {
+    if(scrollControlRef.current) {
+      const childDiv = scrollControlRef.current.querySelector('#projects');
+      if(childDiv) {
+        childDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  }
+
   return (
-    <div className="flex min-h-screen flex-col items-start bg-slate-900 text-slate-400 px-6 md:px-12 lg:px-24 lg:flex-row lg:gap-4 lg:pt-6">
+    <div ref={scrollControlRef} className="flex min-h-screen max-h-screen flex-col items-start bg-slate-900 text-slate-400 px-6 md:px-12 lg:px-24 lg:flex-row lg:gap-4 lg:pt-0 overflow-y-scroll">
       <header className="my-12 md:my-20 lg:max-h-screen lg:sticky lg:top-[104px] lg:w-1/2">
         <div>
           <h1 className="text-4xl sm:text-5xl text-slate-200 font-bold tracking-tight">Dustin Kurtz</h1>
@@ -17,22 +175,23 @@ export default function Home() {
           <p>I build engaging, innovative software solutions</p>
           <nav className="hidden lg:block my-20">
             <ul className="w-max">
-              <li className="mt-5 hover:cursor-pointer">
-                <a className="group flex gap-4 items-center motion-reduce:transition-none" href="#about">
-                  <span className="border-b-2 border-slate-700 w-8 h-[1px] inline group-hover:w-16 group-hover:border-slate-200 transition-all duration-300 ease-in-out"></span>
-                  <span className="text-xs group-hover:text-slate-200 transition-all duration-300 ease-in-out">ABOUT</span>
+              <li className="mt-5 hover:cursor-pointer" onClick={scrollToAbout}>
+                <a className="group flex gap-4 items-center motion-reduce:transition-none">
+                  <span id="about-Accent" className="border-b-2 border-slate-700 w-8 h-[1px] inline group-hover:w-16 group-hover:border-slate-200 transition-all duration-300 ease-in-out"></span>
+                  <span id="about-Word" className="text-xs group-hover:text-slate-200 transition-all duration-300 ease-in-out">ABOUT</span>
+                </a>
+                {/* group-hover:w-16 group-hover:border-slate-200 transition-all duration-300 ease-in-out */}
+              </li>
+              <li className="mt-5 hover:cursor-pointer" onClick={scrollToExperience}>
+                <a className="group flex gap-4 items-center motion-reduce:transition-none">
+                  <span id="experience-Accent" className="border-b-2 border-slate-700 w-8 h-[1px] inline group-hover:w-16 group-hover:border-slate-200 transition-all duration-300 ease-in-out"></span>
+                  <span id="experience-Word" className="text-xs group-hover:text-slate-200 transition-all duration-150 ease-in-out">EXPERIENCE</span>
                 </a>
               </li>
-              <li className="mt-5 hover:cursor-pointer">
-                <a className="group flex gap-4 items-center motion-reduce:transition-none" href="#experience">
-                  <span className="border-b-2 border-slate-700 w-8 h-[1px] inline group-hover:w-16 group-hover:border-slate-200 transition-all duration-150 ease-in-out"></span>
-                  <span className="text-xs group-hover:text-slate-200 transition-all duration-150 ease-in-out">EXPERIENCE</span>
-                </a>
-              </li>
-              <li className="mt-5 hover:cursor-pointer">
-                <a className="group flex gap-4 items-center motion-reduce:transition-none" href="#projects">
-                  <span className="border-b-2 border-slate-700 w-8 h-[1px] inline group-hover:w-16 group-hover:border-slate-200 transition-all duration-150 ease-in-out"></span>
-                  <span className="text-xs group-hover:text-slate-200 transition-all duration-150 ease-in-out">PROJECTS</span>
+              <li className="mt-5 hover:cursor-pointer" onClick={scrollToProjects}>
+                <a className="group flex gap-4 items-center motion-reduce:transition-none">
+                  <span id="projects-Accent" className="border-b-2 border-slate-700 w-8 h-[1px] inline group-hover:w-16 group-hover:border-slate-200 transition-all duration-300 ease-in-out"></span>
+                  <span id="projects-Word" className="text-xs group-hover:text-slate-200 transition-all duration-150 ease-in-out">PROJECTS</span>
                 </a>
               </li>
             </ul>
@@ -51,8 +210,8 @@ export default function Home() {
           </li>
         </ul>
       </header>
-      <main className="pb-16 lg:max-h-full lg:w-1/2 lg:mt-12 lg:mb-12 scroll-smooth">
-        <section id="about" className="mt-7 leading-customHeight">
+      <main className="pb-16 lg:max-h-full lg:w-1/2 lg:pt-0 lg:mb-12">
+        <section id="about" className="mt-7 leading-customHeight lg:pt-24 lg:mt-0">
           <h3 className="text-slate-200 font-extrabold text-sm my-9 tracking-widest lg:hidden">ABOUT</h3>
           <p>Back in 2022, I decided to dive headfirst into the vast world of software development! Fast-forward to today, 
              and I&rsquo;ve had the privilege of building software for a large manufacturing company, a small local business, 
