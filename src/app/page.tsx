@@ -199,7 +199,7 @@ export default function Home() {
             <li className="mt-11 sm:flex flex-row-reverse">
               <div className="sm:w-3/4">
                 <a className="flex items-center gap-2 h-10" href="https://devlinks-mu.vercel.app/" target="_blank" rel="noopener noreferrer">
-                  <span className="text-slate-200 font-extrabold text-md my-11 tracking-widest">Devlinks</span>
+                  <span className="text-slate-200 font-extrabold text-md my-11 tracking-widest">devlinks</span>
                   <Image src={Arrow} alt="ArrowIcon" width={20} height={20}/>
                 </a>
                 <p className="text-sm">
