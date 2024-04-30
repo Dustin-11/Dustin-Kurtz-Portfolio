@@ -151,12 +151,12 @@ export default function Home() {
                   • Transitioned from novice programmer to proficient full-stack developer, creating scalable and reliable applications.<br/>
                 </p>
                 <div className="mt-6 flex flex-wrap gap-2">
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Typescript</span>
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Javascript</span>
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Next</span>
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">React</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">TypeScript</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">JavaScript</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Next.js</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">React.js</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Firebase</span>
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Tailwind</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Tailwind CSS</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10 mr-2">HTML</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10 mr-2">CSS</span>
                 </div>
@@ -187,10 +187,10 @@ export default function Home() {
                   • Also allows the user to manage their profile settings, such as profile photo, saved contact info, profile photo, and update their password.<br/>
                 </p>
                 <div className="my-6 flex flex-wrap gap-2">
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Next</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Next.js</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Firebase</span>
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Typescript</span>
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Tailwind</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">TypeScript</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Tailwind CSS</span>
                 </div>
               </div>
               <div className="w-40 sm:w-1/4 sm:pr-10 sm:mt-3">
@@ -212,10 +212,10 @@ export default function Home() {
                   • Follows a multi-tenant architecture, ensuring data isolation and customization for each user, enabling the platform to serve multiple users effectively.<br/>
                 </p>
                 <div className="my-6 flex flex-wrap gap-2">
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Next</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Next.js</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Firebase</span>
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Typescript</span>
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Tailwind</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">JavaScript</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Tailwind CSS</span>
                 </div>
               </div>
               <div className="w-40 sm:w-1/4 sm:pr-10 sm:mt-3">
@@ -238,9 +238,9 @@ export default function Home() {
                   • Provides detailed information about selected countries when clicked by the user.<br/>
                 </p>
                 <div className="my-6 flex flex-wrap gap-2">
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">React</span>
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Javascript</span>
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Tailwind</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">React.js</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">JavaScript</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Tailwind CSS</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">API</span>
                 </div>
               </div>
@@ -261,8 +261,9 @@ export default function Home() {
                   • Incorporates interactive effects that respond to user events, enhancing user engagement.<br/>
                 </p>
                 <div className="my-6 flex flex-wrap gap-2">
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Javascript</span>
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Tailwind</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">React.js</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">JavaScript</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Tailwind CSS</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Semantic HTML</span>
                 </div>
               </div>
