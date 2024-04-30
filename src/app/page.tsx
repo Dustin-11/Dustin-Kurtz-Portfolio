@@ -12,6 +12,22 @@ import { useEffect, useRef } from "react";
 
 export default function Home() {
   const scrollControlRef = useRef<HTMLDivElement>(null);
+  // const videoRef = useRef<HTMLVideoElement>(null);
+
+  // const toggleFullScreen = () => {
+  //   if (videoRef.current) {
+  //     if (videoRef.current.requestFullscreen) {
+  //       videoRef.current.requestFullscreen();
+  //     } 
+  //     // else if (videoRef.current.mozRequestFullScreen) { // Firefox
+  //     //   videoRef.current.mozRequestFullScreen();
+  //     // } else if (videoRef.current.webkitRequestFullscreen) { // Chrome, Safari and Opera
+  //     //   videoRef.current.webkitRequestFullscreen();
+  //     // } else if (videoRef.current.msRequestFullscreen) { // IE/Edge
+  //     //   videoRef.current.msRequestFullscreen();
+  //     // }
+  //   }
+  // };
 
   const scrollToAbout = () => {
     if(scrollControlRef.current) {
@@ -183,7 +199,7 @@ export default function Home() {
             </li>
             <li className="mt-11 sm:flex flex-row-reverse">
               <div className="sm:w-3/4">
-                <a className="flex items-center gap-2 h-10" href="https://devlinks-kur6z8nmb-dustin-kurtzs-projects.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <a className="flex items-center gap-2 h-10" href="https://devlinks-mu.vercel.app/" target="_blank" rel="noopener noreferrer">
                   <span className="text-slate-200 font-extrabold text-md my-11 tracking-widest">Devlinks</span>
                   <Image src={Arrow} alt="ArrowIcon" width={20} height={20}/>
                 </a>
