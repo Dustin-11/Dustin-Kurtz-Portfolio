@@ -144,9 +144,9 @@ export default function Home() {
                 <p className="text-sm">
                   • Developed foundational software development skills, including object-oriented programming (OOP), 
                     proficiency in multiple programming languages, and experience with frontend frameworks.<br/>
-                  • Built diverse projects, including full-stack web application, API projects, and static websites, to apply and reinforce new skills.<br/>
+                  • Built diverse projects, including full-stack web applications, API projects, and static websites, to apply and reinforce new skills.<br/>
                   • Enhanced critical thinking and problem-solving abilities through real-world challenges in project development, 
-                    such as API integration, scalability, cross-platform compatability, etc.<br/>
+                    such as API integration, scalability, cross-platform compatability, data flow and persistence, etc.<br/>
                   • Cultivated a deep passion for software development, driving continuous learning and growth.<br/>
                   • Transitioned from novice programmer to proficient full-stack developer, creating scalable and reliable applications.<br/>
                 </p>
