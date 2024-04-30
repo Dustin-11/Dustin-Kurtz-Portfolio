@@ -263,8 +263,7 @@ export default function Home() {
                 <div className="my-6 flex flex-wrap gap-2">
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">React.js</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">JavaScript</span>
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Tailwind CSS</span>
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Semantic HTML</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">CSS</span>
                 </div>
               </div>
               <div className="w-40 sm:w-1/4 sm:pr-10 sm:mt-3">
