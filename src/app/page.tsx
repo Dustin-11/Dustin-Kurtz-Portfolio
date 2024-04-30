@@ -184,7 +184,6 @@ export default function Home() {
                   • Implemented CRUD operations for invoices to maintain up-to-date records.<br/>
                   • Provided functionality to manage customer records efficiently.<br/>
                   • Enabled users to manage profile settings, including profile photo, saved contact info, and password updates.<br/>
-                  • Also allows the user to manage their profile settings, such as profile photo, saved contact info, profile photo, and update their password.<br/>
                 </p>
                 <div className="my-6 flex flex-wrap gap-2">
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Next.js</span>
@@ -205,8 +204,8 @@ export default function Home() {
                 </a>
                 <p className="text-sm">
                   • A comprehensive link-sharing platform for professionals.<br/>
-                  • A full-stack application that facilitates easy sharing of multiple social media links using a single, customizable link.<br/>
-                  • Enables users to create, read, update, and delete links, tailoring their shared content to their needs.<br/>
+                  • A full-stack application that facilitates easy sharing of multiple social media links using a single link.<br/>
+                  • Enables users to create, read, update, and delete links, tailoring the sharable content to their needs.<br/>
                   • Utilizes dynamic SVG customizations to create a dynamic user interface based on the links added by the user, optimized for large screens.<br/>
                   • Implements custom drag-and-drop logic, allowing users to effortlessly reorder the links they share.<br/>
                   • Follows a multi-tenant architecture, ensuring data isolation and customization for each user, enabling the platform to serve multiple users effectively.<br/>
@@ -231,7 +230,6 @@ export default function Home() {
                 </a>
                 <p className="text-sm">
                   • A frontend application for exploring countries around the world.<br/>
-                  • Allows users to explore countries worldwide from their computer.<br/>
                   • Consumes an API to provide users with information about countries all over the world.<br/>
                   • Enables users to search for countries by name, with results dynamically filtered as they type.<br/>
                   • Provides predefined filters for users to explore countries by region.<br/>
