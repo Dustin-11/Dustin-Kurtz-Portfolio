@@ -104,7 +104,7 @@ export default function Home() {
           <h3 className="text-slate-200 font-extrabold text-sm my-9 tracking-widest lg:hidden">ABOUT</h3>
           <p>Back in 2022, I decided to dive headfirst into the vast world of software development! Fast-forward to today, 
              and I&rsquo;ve had the privilege of building software for a large manufacturing company, a small local business, 
-             and myself!</p>
+             and myself.</p>
           <p className="mt-4">My journey started as a self-taught software developer where I honed my skills primarily through
              building applications and websites. Then I transitioned this experience into a full-time profession in 2023.
           </p>
