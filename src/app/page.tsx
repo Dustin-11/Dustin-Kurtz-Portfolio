@@ -132,8 +132,8 @@ export default function Home() {
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">XAML</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Legacy ERP</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Microsoft SQL Server</span>
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10 mr-2">MySQL</span>
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10 mr-2">Dapper</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">MySQL</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Dapper</span>
                 </div>
               </div>
             </li>
@@ -157,8 +157,9 @@ export default function Home() {
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">React.js</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Firebase</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Tailwind CSS</span>
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10 mr-2">HTML</span>
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10 mr-2">CSS</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">HTML</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">CSS</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Git</span>
                 </div>
               </div>
             </li>
