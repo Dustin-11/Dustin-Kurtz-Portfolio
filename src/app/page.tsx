@@ -204,12 +204,12 @@ export default function Home() {
                   <Image src={Arrow} alt="ArrowIcon" width={20} height={20}/>
                 </a>
                 <p className="text-sm">
-                  • A comprehensive link-sharing platform for professionals.<br/>
                   • A full-stack application that facilitates easy sharing of multiple social media links using a single link.<br/>
                   • Enables users to create, read, update, and delete links, tailoring the sharable content to their needs.<br/>
                   • Utilizes dynamic SVG customizations to create a dynamic user interface based on the links added by the user, optimized for large screens.<br/>
                   • Implements custom drag-and-drop logic, allowing users to effortlessly reorder the links they share.<br/>
-                  • Follows a multi-tenant architecture, ensuring data isolation and customization for each user, enabling the platform to serve multiple users effectively.<br/>
+                  • Follows a multi-tenant architecture, for data isolation and customized user experiences.<br/>
+                  • The shared link is compatible with mobile devices, but the application interface is optimized for desktop use.<br/>
                 </p>
                 <div className="my-6 flex flex-wrap gap-2">
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Next.js</span>
