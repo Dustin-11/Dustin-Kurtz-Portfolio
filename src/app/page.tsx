@@ -11,6 +11,7 @@ import { useRef, useState } from "react";
 export default function Home() {
   const scrollControlRef = useRef<HTMLDivElement>(null);
   const [open, setOpen] = useState(false);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
   const mavinProjects = [
   {
     title: "Budget Automation Suite",
@@ -163,28 +164,32 @@ export default function Home() {
                 <h5 className="text-slate-200 font-semibold text-md my-2 pt-4 tracking-widest">Key Projects</h5>
                 <ul>
                   {mavinProjects.map((project, idx) => {
+                    const isOpen = openIndex === idx;
+                  
                     return (
-                        <li key={idx} className="mb-4">
-                          <h6
-                            className="text-slate-200 font-semibold text-sm my-2 tracking-widest cursor-pointer"
-                            onClick={() => setOpen(!open)}
-                          >
-                            {project.title}
-                            <span className="text-xs ml-2">{open ? "▲" : "▼"}</span>
-                          </h6>
-                          {open && (
-                            <div className="text-sm space-y-2 ml-2">
-                              <div><strong>Context:</strong> {project.context}</div>
-                              <div>
-                                <strong>Contribution:</strong>
-                                <ul className="list-disc list-inside ml-4">
-                                  {project.contribution.map((item, i) => <li key={i}>{item}</li>)}
-                                </ul>
-                              </div>
-                              <div><strong>Impact:</strong> {project.impact}</div>
-                              <div><strong>Tech:</strong> {project.tech}</div>
-                            </div> )}
-                        </li>
+                      <li key={idx} className="mb-4">
+                        <h6
+                          className="text-slate-200 font-semibold text-sm my-2 tracking-widest cursor-pointer"
+                          onClick={() => setOpenIndex(isOpen ? null : idx)}
+                        >
+                          {project.title}
+                          <span className="text-xs ml-2">{isOpen ? "▲" : "▼"}</span>
+                        </h6>
+                    
+                        {isOpen && (
+                          <div className="text-sm space-y-2 ml-2">
+                            <div><strong>Context:</strong> {project.context}</div>
+                            <div>
+                              <strong>Contribution:</strong>
+                              <ul className="list-disc list-inside ml-4">
+                                {project.contribution.map((item, i) => <li key={i}>{item}</li>)}
+                              </ul>
+                            </div>
+                            <div><strong>Impact:</strong> {project.impact}</div>
+                            <div><strong>Tech:</strong> {project.tech}</div>
+                          </div>
+                        )}
+                      </li>
                     );
                   })}
                 </ul>
