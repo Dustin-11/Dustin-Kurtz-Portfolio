@@ -6,28 +6,66 @@ import LinkedInIcon from "../../public/linkedin-svgrepo-com.svg";
 import Arrow from "../../public/arrow-up-right-svgrepo-com.svg";
 import BillEaseInvoices from "../../public/BillEase-Invoices.png";
 import DevlinksLinks from "../../public/Devlinks-Links.png";
-import WorldExploreX from "../../public/WorldExploreX.png";
-import NewsHomePage from "../../public/NewsHomePage.png";
-import { useEffect, useRef } from "react";
+import { useRef, useState } from "react";
 
 export default function Home() {
   const scrollControlRef = useRef<HTMLDivElement>(null);
-  // const videoRef = useRef<HTMLVideoElement>(null);
-
-  // const toggleFullScreen = () => {
-  //   if (videoRef.current) {
-  //     if (videoRef.current.requestFullscreen) {
-  //       videoRef.current.requestFullscreen();
-  //     } 
-  //     // else if (videoRef.current.mozRequestFullScreen) { // Firefox
-  //     //   videoRef.current.mozRequestFullScreen();
-  //     // } else if (videoRef.current.webkitRequestFullscreen) { // Chrome, Safari and Opera
-  //     //   videoRef.current.webkitRequestFullscreen();
-  //     // } else if (videoRef.current.msRequestFullscreen) { // IE/Edge
-  //     //   videoRef.current.msRequestFullscreen();
-  //     // }
-  //   }
-  // };
+  const [open, setOpen] = useState(false);
+  const mavinProjects = [
+  {
+    title: "Budget Automation Suite",
+    context: "Accounting relied on manual entry to maintain budget records across three sub-companies.",
+    contribution: [
+      "Independently designed and deployed a monitoring service + API suite.",
+      "Implemented a monitoring service to poll DBs across all three companies and detect payments and POs.",
+      "Automated reconciliation into a unified Budget Master table.",
+      "Built a separate WPF maintenance application that consumed API endpoints for data upkeep.",
+      "Automated templated email notifications with user-managed distribution lists."
+    ],
+    impact: "Automated roughly 44% of manual accounting entries, reducing dependency on dev team, and gave accounting/procurement a self-service suite for maintaining budget records.",
+    tech: "ASP.NET, Dapper, SQL Server, WPF."
+  },
+  {
+    title: "ERP Migration Data Pipeline",
+    context: "Migrated from legacy ERP to Acumatica, extracting and transforming data across all divisions and manufacturing operations.",
+    contribution: [
+      "Designed reusable SQL queries for extracting and transforming tables across sub-companies.",
+      "Handled multi-step BOM translation via extraction and SQL Server staging.",
+      "Ensured repeatable processes for multiple tenants."
+    ],
+    impact: "Enabled consistent, repeatable migrations of ERP data for multiple tenants, saving significant time for the data upload team.",
+    tech: "SQL, Actian Zen, SQL Server."
+  },
+  {
+    title: "AR Aging Report Scraper",
+    context: "Migration from legacy ERP to Acumatica required extracting complex AR data. Legacy system had scattered, undocumented AR entries across many tables.",
+    contribution: [
+      "Designed and implemented a Python CLI to automate AR Aging workflows.",
+      "Enabled parsing of reports from ERP AR Aging report.",
+      "Built logic to extract invoice numbers via Unicode string matching.",
+      "Integrated pyodbc to re-query a 32-bit database for supporting data.",
+      "Transformed results into the upload template required by the upload team.",
+      "Automated export of formatted data into Excel using openpyxl."
+    ],
+    impact: "Delivered a solution in just 4 days, unlocking migration of roughly 2,500 AR records and accomplishing a critical milestone.",
+    tech: "Python, pyodbc, openpyxl, Typer."
+  },
+  {
+    title: "Smart Packaging Engine",
+    context: "Company began boxing products for shipment, but table leaf boxes were not included in the ERP BOM. Packaging rules were complex and undocumented.",
+    contribution: [
+      "Designed and implemented a WPF desktop app to handle packaging workflows.",
+      "Built logic to parse table leaf inventory IDs using ID structure rules to determine dimensions.",
+      "Developed a maintainable rules engine to encode complex packaging rules.",
+      "Implemented shipment queries to identify tables requiring leaves.",
+      "Automated label printing.",
+      "Added error logging for user visibility and developer observability.",
+      "Authored documentation of packaging rules, later adopted on the production floor."
+    ],
+    impact: "Eliminated manual calculation and labeling, reduced shipping prep errors, and standardized workflow.",
+    tech: "WPF, .NET, Dapper, SQL Server."
+  }
+];
 
   const scrollToAbout = () => {
     if(scrollControlRef.current) {
@@ -62,7 +100,7 @@ export default function Home() {
         <div>
           <h1 className="text-4xl sm:text-5xl text-slate-200 font-bold tracking-tight">Dustin Kurtz</h1>
           <h3 className="text-slate-200 text-lg sm:text-xl font-medium tracking-tight my-3.5">Software Engineer</h3>
-          <p>I build engaging, innovative software solutions</p>
+          <p>From invoices to SMS rideshares, I make software that works</p>
           <nav className="hidden lg:block my-20">
             <ul className="w-max">
               <li className="mt-5 hover:cursor-pointer" onClick={scrollToAbout}>
@@ -102,13 +140,14 @@ export default function Home() {
       <main className="pb-16 lg:max-h-full lg:w-1/2 lg:pt-0 lg:mb-12">
         <section id="about" className="mt-7 leading-customHeight lg:pt-24 lg:mt-0">
           <h3 className="text-slate-200 font-extrabold text-sm my-9 tracking-widest lg:hidden">ABOUT</h3>
-          <p>Back in 2022, I decided to dive headfirst into the vast world of software development! Fast-forward to today, 
-             and I&rsquo;ve had the privilege of building software for a large manufacturing company, a small local business, 
-             and myself.</p>
-          <p className="mt-4">My journey started as a self-taught software developer where I honed my skills primarily through
-             building applications and websites. Then I transitioned this experience into a full-time profession in 2023.
+          <p>Back in 2022, I dove headfirst into software development, quickly evolving from building applications and websites to delivering production-ready 
+            solutions for a manufacturing company and other real-world clients.</p>
+          <p className="mt-4">
+            Today, I design, develop, and maintain complex systems, from multi-tenant 
+            full-stack applications to scalable backend platforms like Golle, an SMS-first rideshare service for Amish communities.
+            I&rsquo;m passionate about solving challenging problems, writing maintainable code, and building software that makes a real impact. 
           </p>
-          <p className="mt-4">When I&rsquo;m not at the computer, I&rsquo;m usually hiking, mountain biking, or hanging out with my wife.
+          <p className="mt-4">When I&rsquo;m not coding, you&rsquo;ll probably find me hiking, mountain biking, or spending time with my wife.
           </p>
         </section>
         <section id="experience" className="mt-20">
@@ -119,47 +158,70 @@ export default function Home() {
               <div className="sm:w-3/4">
                 <h3 className="text-slate-200 font-semibold text-md my-2 tracking-widest">Software Engineer - <a>Mavin</a></h3>
                 <p className="text-sm">
-                  • Enhanced functionality of legacy ERP system.<br/>
-                  • Implemented improvements to core manufacturing and budgeting applications, enhancing user-experience, accuracy, and capacity.<br/>
-                  • Managed the full life-cycle of in-house applications.<br/>
-                  • Implemented version control and systemization of locally hosted programs.<br/>
-                  • Collaborated with non-technical personnel to develop solutions meeting business objectives.
+                  Developed ERP and internal applications that solved complex business problems, automated manual processes, and delivered reliable solutions in collaboration with cross-functional teams.
                 </p>
+                <h5 className="text-slate-200 font-semibold text-md my-2 pt-4 tracking-widest">Key Projects</h5>
+                <ul>
+                  {mavinProjects.map((project, idx) => {
+                    return (
+                        <li key={idx} className="mb-4">
+                          <h6
+                            className="text-slate-200 font-semibold text-sm my-2 tracking-widest cursor-pointer"
+                            onClick={() => setOpen(!open)}
+                          >
+                            {project.title}
+                            <span className="text-xs ml-2">{open ? "▲" : "▼"}</span>
+                          </h6>
+                          {open && (
+                            <div className="text-sm space-y-2 ml-2">
+                              <div><strong>Context:</strong> {project.context}</div>
+                              <div>
+                                <strong>Contribution:</strong>
+                                <ul className="list-disc list-inside ml-4">
+                                  {project.contribution.map((item, i) => <li key={i}>{item}</li>)}
+                                </ul>
+                              </div>
+                              <div><strong>Impact:</strong> {project.impact}</div>
+                              <div><strong>Tech:</strong> {project.tech}</div>
+                            </div> )}
+                        </li>
+                    );
+                  })}
+                </ul>
                 <div className="mt-6 flex flex-wrap gap-2">
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">C#</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Python</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">SQL</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">.NET</span>
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">XAML</span>
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Legacy ERP</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Microsoft SQL Server</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">MySQL</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Dapper</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">XAML</span>
                 </div>
               </div>
             </li>
             <li className="mt-11 sm:flex sm:gap-4">
               <h5 className="text-xs sm:w-1/4 sm:mt-3">Aug 2022 - PRESENT</h5>
               <div className="sm:w-3/4">
-                <h3 className="text-slate-200 font-semibold text-md my-2 tracking-widest">Software Developer - Self-Taught</h3>
+                <h3 className="text-slate-200 font-semibold text-md my-2 tracking-widest">Software Developer - Independent Projects</h3>
                 <p className="text-sm">
-                  • Developed foundational software development skills, including object-oriented programming (OOP), 
-                    proficiency in multiple programming languages, and experience with frontend frameworks.<br/>
-                  • Built diverse projects, including full-stack web applications, API projects, and static websites, to apply and reinforce new skills.<br/>
-                  • Enhanced critical thinking and problem-solving abilities through real-world challenges in project development, 
-                    such as API integration, scalability, cross-platform compatability, data flow and persistence, etc.<br/>
-                  • Cultivated a deep passion for software development, driving continuous learning and growth.<br/>
-                  • Transitioned from novice programmer to proficient full-stack developer, creating scalable and reliable applications.<br/>
+                  Built apps that solve real problems like managing invoices, sharing links, and more. 
+                  Currently developing a rural rideshare platform (Golle) to serve the Amish community. 
+                  Learned multiple languages, frameworks, and software best practices while tackling complex problems from 
+                  start to finish. Check out the Projects section for the full lineup.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-2">
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">TypeScript</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">JavaScript</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">NestJS</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Express.js</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Next.js</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">React.js</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">AWS</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Firebase</span>
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Tailwind CSS</span>
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">HTML</span>
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">CSS</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Docker</span>
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Git</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Tailwind CSS</span>
                 </div>
               </div>
             </li>
@@ -174,17 +236,37 @@ export default function Home() {
           <ul>
             <li className="sm:flex flex-row-reverse">
               <div className="sm:w-3/4">
+                <a className="flex items-center gap-2 h-10" href="https://github.com/Dustin-11/golle-docs" target="_blank" rel="noopener noreferrer">
+                  <span className="text-slate-200 font-extrabold text-md my-11 tracking-widest">Golle</span>
+                  <Image src={Arrow} alt="ArrowIcon" width={20} height={20}/>
+                </a>
+                <p className="text-sm">
+                  • SMS-first rideshare backend for riders and drivers without smartphones, designed for rural and Amish communities.<br/>
+                  • <strong>Live:</strong> Ride Request Service (CRUD, action-key workflows, Node.js/TypeScript, Supabase) and Security Service (OTP authentication, stateless sessions).<br/>
+                  • <strong>In Progress/Designed:</strong> Orchestration, Dispatch, Payment, and SMS Gateway services for workflow coordination, real-time matching, payments, and messaging.<br/>
+                  • Implements a <strong>microservices architecture</strong> with stateless, horizontally scalable services, database-backed state, Prisma optimizations, and robust error handling.<br/>
+                  • Designed to handle complex multi-step workflows while keeping future web/mobile integration in mind.
+                </p>
+                <div className="my-6 flex flex-wrap gap-2">
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Express.js</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">NestJS</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">TypeScript</span>
+                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Supabase</span>
+                </div>
+              </div>
+            </li>
+            <li className="sm:flex flex-row-reverse">
+              <div className="sm:w-3/4">
                 <a className="flex items-center gap-2 h-10" href="https://bill-ease-eight.vercel.app/" target="_blank" rel="noopener noreferrer">
                   <span className="text-slate-200 font-extrabold text-md my-11 tracking-widest">BillEase</span>
                   <Image src={Arrow} alt="ArrowIcon" width={20} height={20}/>
                 </a>
                 <p className="text-sm">
-                  • A full-stack application for managing invoices, customers, and profile settings.<br/>
-                  • Actively used by a local manufacturing company, this application streamlines invoice management and customer contact records.<br/>
-                  • Adheres to a multi-tenant architecture, allowing it to serve multiple users each with their own user-specific data.<br/>
-                  • Implemented CRUD operations for invoices to maintain up-to-date records.<br/>
-                  • Provided functionality to manage customer records efficiently.<br/>
-                  • Enabled users to manage profile settings, including profile photo, saved contact info, and password updates.<br/>
+                  • A full-stack application for managing invoices, customers, and user profiles.<br/>
+                  • Streamlines invoice and contact management for a small local business.<br/>
+                  • Multi-tenant architecture ensures secure, isolated data for multiple users.<br/>
+                  • Implements CRUD operations for invoices and customer records.<br/>
+                  • Provids comprehensive profile management, including photos, contact info, and password updates.
                 </p>
                 <div className="my-6 flex flex-wrap gap-2">
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Next.js</span>
@@ -204,12 +286,12 @@ export default function Home() {
                   <Image src={Arrow} alt="ArrowIcon" width={20} height={20}/>
                 </a>
                 <p className="text-sm">
-                  • A full-stack application that facilitates easy sharing of multiple social media links using a single link.<br/>
-                  • Enables users to create, read, update, and delete links, tailoring the sharable content to their needs.<br/>
-                  • Utilizes dynamic SVG customizations to create a dynamic user interface based on the links added by the user, optimized for large screens.<br/>
-                  • Implements custom drag-and-drop logic, allowing users to effortlessly reorder the links they share.<br/>
-                  • Follows a multi-tenant architecture, for data isolation and customized user experiences.<br/>
-                  • The shared link is compatible with mobile devices, but the application interface is optimized for desktop use.<br/>
+                  • A full-stack application to share multiple social media URLs through a single link.<br/>
+                  • CRUD functionality allows full control over user links and customization.<br/>
+                  • Leveraged dynamic SVG customizations for a responsive, visually-rich interface optimized for large screens.<br/>
+                  • Engineered custom drag-and-drop functionality for seamless link reordering.<br/>
+                  • Designed multi-tenant architecture for secure, isolated user data.<br/>
+                  • Shared links are mobile-compatible; app interface tailored for desktop.
                 </p>
                 <div className="my-6 flex flex-wrap gap-2">
                   <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Next.js</span>
@@ -220,53 +302,6 @@ export default function Home() {
               </div>
               <div className="w-40 sm:w-1/4 sm:pr-10 sm:mt-3">
                 <Image src={DevlinksLinks} alt="Screenshot of Devlinks App"/>
-              </div>
-              
-            </li>
-            <li className="mt-11 sm:flex flex-row-reverse">
-              <div className="sm:w-3/4">
-                <a className="flex items-center gap-2 h-10" href="https://dustin-11.github.io/Country_Api_App/" target="_blank" rel="noopener noreferrer">
-                  <span className="text-slate-200 font-extrabold text-md my-11 tracking-widest">WorldExploreX</span>
-                  <Image src={Arrow} alt="ArrowIcon" width={20} height={20}/>
-                </a>
-                <p className="text-sm">
-                  • A frontend application for exploring countries around the world.<br/>
-                  • Consumes an API to provide users with information about countries all over the world.<br/>
-                  • Enables users to search for countries by name, with results dynamically filtered as they type.<br/>
-                  • Provides predefined filters for users to explore countries by region.<br/>
-                  • Provides detailed information about selected countries when clicked by the user.<br/>
-                </p>
-                <div className="my-6 flex flex-wrap gap-2">
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">React.js</span>
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">JavaScript</span>
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">Tailwind CSS</span>
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">API</span>
-                </div>
-              </div>
-              <div className="w-40 sm:w-1/4 sm:pr-10 sm:mt-3">
-                <Image src={WorldExploreX} alt="Screenshot of BillEase App"/>
-              </div>
-            </li>
-            <li className="mt-11 sm:flex flex-row-reverse">
-              <div className="sm:w-3/4">
-                <a className="flex items-center gap-2 h-10" href="https://dustin-11.github.io/NewsHomePage/" target="_blank" rel="noopener noreferrer">
-                  <span className="text-slate-200 font-extrabold text-md my-11 tracking-widest">NewsHomePage</span>
-                  <Image src={Arrow} alt="ArrowIcon" width={20} height={20}/>
-                </a>
-                <p className="text-sm">
-                  • A static landing page for a news organization.<br/>
-                  • Represents a simple, yet engaging, landing page for a news organization.<br/>
-                  • Utilizes a responsive design to ensure optimal viewing experience across devices.<br/>
-                  • Incorporates interactive effects that respond to user events, enhancing user engagement.<br/>
-                </p>
-                <div className="my-6 flex flex-wrap gap-2">
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">React.js</span>
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">JavaScript</span>
-                  <span className="rounded-full p-2 text-xs text-teal-300 bg-teal-400/10">CSS</span>
-                </div>
-              </div>
-              <div className="w-40 sm:w-1/4 sm:pr-10 sm:mt-3">
-                <Image src={NewsHomePage} alt="Screenshot of BillEase App"/>
               </div>
             </li>
           </ul>
