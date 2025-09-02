@@ -10,6 +10,7 @@ import { useRef, useState } from "react";
 
 export default function Home() {
   const scrollControlRef = useRef<HTMLDivElement>(null);
+  const [open, setOpen] = useState(false);
   const mavinProjects = [
   {
     title: "Budget Automation Suite",
@@ -162,7 +163,6 @@ export default function Home() {
                 <h5 className="text-slate-200 font-semibold text-md my-2 pt-4 tracking-widest">Key Projects</h5>
                 <ul>
                   {mavinProjects.map((project, idx) => {
-                    const [open, setOpen] = useState(false);
                     return (
                         <li key={idx} className="mb-4">
                           <h6
